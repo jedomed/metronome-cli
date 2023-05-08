@@ -51,9 +51,7 @@ def key_read():
         global bpm_time
         inkey = _Getch()
         k=inkey()
-        if k=='\x03[C':
-            os._exit(1)
-        elif k=='\x1b[A':
+        if k=='\x1b[A':
             bpm_time = add_bpm(1)
         elif k=='\x1b[B':
             bpm_time = add_bpm(-1)
